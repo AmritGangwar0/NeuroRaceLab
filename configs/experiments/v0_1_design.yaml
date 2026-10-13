@@ -1,0 +1,34 @@
+version: 0.1
+
+observation:
+  dimension: 36
+
+action:
+  dimension: 2
+
+architectures:
+  - id: rnn_residual_128
+    primary_neurons: 128
+  - id: continuous_time_128
+    primary_neurons: 128
+  - id: equilibrium_128
+    primary_neurons: 128
+
+benchmark_regimes:
+  - capacity_matched
+  - compute_matched
+
+training:
+  schedule: alternating_es_ea
+  order: [es, ea]
+  switch_on_saturation: true
+
+accounting:
+  primary_capacity_budget: environment_evaluations
+  primary_compute_budget: estimated_flops
+  wall_clock_is_secondary: true
+
+reproducibility:
+  explicit_rng: true
+  isolated_test_seeds: true
+  config_driven: true

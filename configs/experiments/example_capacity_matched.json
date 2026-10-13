@@ -1,0 +1,24 @@
+{
+  "name": "example_capacity_matched",
+  "seed": 20261008,
+  "agent": {
+    "architecture": "rnn_residual",
+    "primary_neurons": 128
+  },
+  "sensors": {
+    "ray_count": 32,
+    "include_speed": true,
+    "include_slip_angle": true,
+    "include_angular_velocity": true,
+    "include_steering_state": true
+  },
+  "budget": {
+    "regime": "capacity_matched",
+    "limit": 100000
+  },
+  "environment": {},
+  "training": {
+    "strategy": "alternating_es_ea"
+  },
+  "evaluation": {}
+}
