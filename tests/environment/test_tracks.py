@@ -1,6 +1,8 @@
 import numpy as np
+
 from neuroracelab.environment.tracks.predefined import oval
 from neuroracelab.environment.tracks.procedural import ProceduralTrackGenerator
+
 
 def test_oval_projection_and_wrap():
     track = oval()

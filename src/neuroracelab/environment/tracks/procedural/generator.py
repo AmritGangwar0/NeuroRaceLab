@@ -1,8 +1,11 @@
 from __future__ import annotations
+
 import hashlib
-import math
+
 import numpy as np
+
 from ..track import Track
+
 
 class ProceduralTrackGenerator:
     def __init__(self, seed: int, points: int = 256, width_m: float = 8.0, harmonics: int = 3):

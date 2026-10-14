@@ -1,5 +1,7 @@
 import numpy as np
+
 from neuroracelab.environment.vehicle import BicycleDynamics, VehicleState
+
 
 def test_straight_acceleration_is_finite():
     model = BicycleDynamics()

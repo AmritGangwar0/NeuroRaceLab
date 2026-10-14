@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
+
 from neuroracelab.core import BenchmarkRegime
+
+
 @dataclass(frozen=True)
 class SensorConfig:
     ray_count:int=32

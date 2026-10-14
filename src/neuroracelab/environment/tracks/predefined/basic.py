@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 import numpy as np
+
 from ..track import Track
+
 
 def oval(radius_x: float = 45.0, radius_y: float = 25.0, width: float = 8.0, points: int = 256) -> Track:
     t = np.linspace(0, 2*np.pi, points, endpoint=False)

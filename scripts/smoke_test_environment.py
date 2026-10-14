@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 import numpy as np
+
 from neuroracelab.environment import RaceEnvironment
 from neuroracelab.environment.tracks.procedural import ProceduralTrackGenerator
 

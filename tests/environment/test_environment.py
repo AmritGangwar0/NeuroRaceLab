@@ -1,6 +1,8 @@
 import numpy as np
+
 from neuroracelab.environment import RaceEnvironment
 from neuroracelab.environment.tracks.procedural import ProceduralTrackGenerator
+
 
 def test_reset_observation_shape_and_range():
     env = RaceEnvironment(track=ProceduralTrackGenerator(42).generate(), seed=42)

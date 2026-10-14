@@ -1,8 +1,12 @@
 from __future__ import annotations
+
 import math
+
 import numpy as np
+
 from .parameters import VehicleParameters
 from .state import VehicleState
+
 
 class BicycleDynamics:
     def __init__(self, params: VehicleParameters | None = None):

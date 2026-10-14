@@ -1,6 +1,8 @@
 import numpy as np
+
 from neuroracelab.environment.sensors import RaycastSensor
 from neuroracelab.environment.tracks.predefined import oval
+
 
 def test_raycast_output():
     track = oval()

@@ -6,7 +6,6 @@ from neuroracelab.environment.simulator.environment import RaceEnvironment
 from neuroracelab.environment.tracks.selection import build_track
 from neuroracelab.visualization.renderer import TrackRenderer
 
-
 #def build_track(track_name: str, seed: int, width: float):
  #   """Build a reproducible track from a name and seed."""
   #  if track_name == "circuit":

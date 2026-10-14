@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 import numpy as np
+
 
 @dataclass
 class VehicleState:
@@ -16,7 +19,7 @@ class VehicleState:
         return np.array([self.x, self.y, self.psi, self.u, self.v, self.r, self.steering], dtype=np.float64)
 
     @classmethod
-    def from_array(cls, values: np.ndarray) -> "VehicleState":
+    def from_array(cls, values: np.ndarray) -> VehicleState:
         values = np.asarray(values, dtype=np.float64)
         if values.shape != (7,):
             raise ValueError("Vehicle state array must have shape (7,)")

@@ -1,5 +1,8 @@
 from dataclasses import dataclass
-from neuroracelab.core import EnvironmentEvaluation,Timer
+
+from neuroracelab.core import EnvironmentEvaluation, Timer
+
+
 @dataclass(frozen=True)
 class EvaluationConfig:
     max_steps:int

@@ -2,6 +2,7 @@ import numpy as np
 
 from neuroracelab.environment.tracks.selection import build_track
 
+
 def test_circuit_selection_is_stable():
     first = build_track("circuit", seed=10, width=9.0)
     second = build_track("circuit", seed=99, width=9.0)

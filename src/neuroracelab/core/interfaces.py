@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import Any, Mapping, Sequence
-from .types import Observation, Action, StepResult
+from collections.abc import Mapping, Sequence
+from typing import Any
+
+from .types import Action, Observation, StepResult
+
 
 class Agent(ABC):
     @abstractmethod

@@ -1,7 +1,11 @@
 from __future__ import annotations
+
 import math
+
 import numpy as np
+
 from ..tracks.track import Track
+
 
 class RaycastSensor:
     def __init__(self, ray_count: int = 32, fov_deg: float = 240.0, max_range_m: float = 30.0):

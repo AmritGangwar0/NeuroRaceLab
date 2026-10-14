@@ -1,13 +1,17 @@
 from __future__ import annotations
-from dataclasses import dataclass
+
 import math
+from dataclasses import dataclass
+
 import numpy as np
+
+from ..sensors.raycast import RaycastSensor
+from ..tracks.predefined.basic import oval
+from ..tracks.track import Track
 from ..vehicle.dynamics import BicycleDynamics
 from ..vehicle.parameters import VehicleParameters
 from ..vehicle.state import VehicleState
-from ..tracks.track import Track
-from ..tracks.predefined.basic import oval
-from ..sensors.raycast import RaycastSensor
+
 
 @dataclass
 class EnvironmentConfig:

@@ -1,6 +1,8 @@
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Mapping
+from typing import Any
+
 
 class BenchmarkRegime(str, Enum):
     CAPACITY_MATCHED = "capacity_matched"

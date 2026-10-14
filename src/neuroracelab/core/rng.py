@@ -1,6 +1,10 @@
-import hashlib, random
+import hashlib
+import random
 from dataclasses import dataclass
+
 import numpy as np
+
+
 @dataclass(frozen=True)
 class RNGManager:
     master_seed: int

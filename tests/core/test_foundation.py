@@ -1,5 +1,7 @@
-from neuroracelab.core import Registry,RNGManager,Budget,BenchmarkRegime,RunAccounting
+from neuroracelab.core import BenchmarkRegime, Budget, Registry, RNGManager, RunAccounting
 from neuroracelab.experiments.schema import SensorConfig
+
+
 def test_observation_is_36d(): assert SensorConfig().observation_dim==36
 def test_registry_rejects_duplicates():
  r=Registry();r.register("x",lambda:1)
