@@ -1,8 +1,11 @@
 """NumPy-only neural controllers for NeuroRaceLab; training is implemented separately."""
 from __future__ import annotations
+
 from collections.abc import Mapping, Sequence
 from typing import Any
+
 import numpy as np
+
 from neuroracelab.core.interfaces import Agent
 
 OBSERVATION_SIZE = 36

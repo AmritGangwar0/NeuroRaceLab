@@ -1,5 +1,6 @@
 """NeuroRaceLab Workbench v0.1: live inference and model/track switching."""
 from __future__ import annotations
+
 import argparse
 import json
 import time
@@ -132,9 +133,7 @@ def main() -> None:
                         speed_multiplier = max(0.25, speed_multiplier / 1.25)
                 # Keep renderer navigation active: arrow keys pan the camera,
                 # they do not change vehicle state or steering.
-                if event.type in (pygame.QUIT, pygame.VIDEORESIZE, pygame.MOUSEWHEEL):
-                    running = renderer.handle_event(event) and running
-                elif event.type == pygame.KEYDOWN and event.key not in (
+                if event.type in (pygame.QUIT, pygame.VIDEORESIZE, pygame.MOUSEWHEEL) or event.type == pygame.KEYDOWN and event.key not in (
                     pygame.K_ESCAPE, pygame.K_q, pygame.K_p, pygame.K_SPACE,
                     pygame.K_BACKSPACE, pygame.K_t, pygame.K_EQUALS, pygame.K_PLUS,
                     pygame.K_KP_PLUS, pygame.K_MINUS, pygame.K_KP_MINUS,

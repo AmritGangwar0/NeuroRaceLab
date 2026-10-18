@@ -1,9 +1,15 @@
 import numpy as np
 import pytest
+
 from neuroracelab.agents.neural import (
-    ARCHITECTURES, OBSERVATION_SIZE, ContinuousTimeController,
-    EquilibriumController, ResidualRNNController, build_neural_controller,
+    ARCHITECTURES,
+    OBSERVATION_SIZE,
+    ContinuousTimeController,
+    EquilibriumController,
+    ResidualRNNController,
+    build_neural_controller,
 )
+
 
 @pytest.mark.parametrize("architecture", ARCHITECTURES)
 def test_action_shape_bounds_and_finiteness(architecture):

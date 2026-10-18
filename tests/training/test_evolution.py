@@ -1,5 +1,7 @@
 import numpy as np
+
 from neuroracelab.training import EvolutionTrainer, TrainingConfig
+
 
 def test_training_tracks_fitness_and_respects_evaluation_budget(tmp_path):
     def objective(parameters, seed):

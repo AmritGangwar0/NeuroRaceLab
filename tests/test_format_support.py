@@ -1,14 +1,13 @@
 import json
-import zipfile
 import sys
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import numpy as np
 import pytest
-
-from format_support import export_nrlmodel, validate_nrlmodel, import_model_file, export_report
+from format_support import export_nrlmodel, export_report, import_model_file, validate_nrlmodel
 
 
 def test_nrlmodel_roundtrip(tmp_path: Path):

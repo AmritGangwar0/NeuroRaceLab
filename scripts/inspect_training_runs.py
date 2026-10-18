@@ -1,9 +1,11 @@
 """Inspect saved NeuroRaceLab training histories and checkpoint metadata."""
 from __future__ import annotations
+
 import json
 from pathlib import Path
 
 import numpy as np
+
 
 def main() -> None:
     base = Path("results/training")

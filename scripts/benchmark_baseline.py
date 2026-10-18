@@ -1,10 +1,18 @@
 """Run reproducible baseline evaluations across NeuroRaceLab track families."""
 from __future__ import annotations
-import argparse, csv, json, platform, statistics, sys
+
+import argparse
+import csv
+import json
+import platform
+import statistics
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from time import perf_counter, perf_counter_ns
+
 import numpy as np
+
 from neuroracelab.agents.baseline import BaselineController
 from neuroracelab.environment import EnvironmentConfig, RaceEnvironment
 from neuroracelab.environment.tracks.selection import build_track

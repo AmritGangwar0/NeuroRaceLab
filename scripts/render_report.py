@@ -1,11 +1,16 @@
 """Render a self-contained, high-resolution PNG from benchmark JSON."""
 from __future__ import annotations
-import argparse, json
+
+import argparse
+import json
 from pathlib import Path
+
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+
 COLORS = {"oval":"#2878B5", "circuit":"#D9534F", "procedural":"#399764", "other":"#777777"}
 def fmt(value, digits=3):
     if value is None: return "N/A"

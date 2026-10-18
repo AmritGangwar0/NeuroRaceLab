@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from collections.abc import Mapping, Sequence
 import math
+from collections.abc import Mapping, Sequence
 from typing import Any
 
 import numpy as np
@@ -42,7 +42,7 @@ class BaselineController(Agent):
 
     def reset(self) -> None:
         """Reset controller state; this baseline is memoryless."""
-        return None
+        return
 
     def act(self, observation: Sequence[float]) -> np.ndarray:
         obs = np.asarray(observation, dtype=np.float64)

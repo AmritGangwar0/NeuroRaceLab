@@ -1,8 +1,10 @@
 """Train NeuroRaceLab neural controllers with alternating ES/EA generations."""
 from __future__ import annotations
-import argparse, json
+
+import argparse
+import json
 from pathlib import Path
-import numpy as np
+
 from neuroracelab.agents.neural import ARCHITECTURES, build_neural_controller
 from neuroracelab.environment import RaceEnvironment
 from neuroracelab.environment.tracks.selection import build_track

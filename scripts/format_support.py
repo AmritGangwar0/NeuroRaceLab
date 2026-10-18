@@ -112,7 +112,6 @@ def export_nrlmodel(
 
 
 def validate_nrlmodel(path: Path) -> dict[str, Any]:
-    import numpy as np
 
     path = Path(path)
     if not zipfile.is_zipfile(path):
@@ -258,7 +257,14 @@ def export_report(source: Path, output: Path, fmt: str) -> Path:
             from reportlab.lib import colors
             from reportlab.lib.pagesizes import A4, landscape
             from reportlab.lib.styles import getSampleStyleSheet
-            from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+            from reportlab.platypus import (
+                Image,
+                Paragraph,
+                SimpleDocTemplate,
+                Spacer,
+                Table,
+                TableStyle,
+            )
         except ImportError as exc:
             raise RuntimeError("PDF export requires reportlab. Install requirements-format-support.txt.") from exc
         doc = SimpleDocTemplate(str(output), pagesize=landscape(A4), title=title)
